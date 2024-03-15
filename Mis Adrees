@@ -1,0 +1,63 @@
+Received: from MR2P264CA0166.FRAP264.PROD.OUTLOOK.COM (2603:10a6:501:1::29) by
+ PR0P264MB2551.FRAP264.PROD.OUTLOOK.COM (2603:10a6:102:1e2::6) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7249.33; Sat, 3 Feb 2024 19:34:35 +0000
+Received: from MR2FRA01FT004.eop-fra01.prod.protection.outlook.com
+ (2603:10a6:501:1:cafe::5a) by MR2P264CA0166.outlook.office365.com
+ (2603:10a6:501:1::29) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7249.31 via Frontend
+ Transport; Sat, 3 Feb 2024 19:34:35 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.208.177)
+ smtp.mailfrom=gmail.com; dkim=pass (signature was verified)
+ header.d=gmail.com;dmarc=pass action=none header.from=gmail.com;
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 209.85.208.177 as permitted sender) receiver=protection.outlook.com;
+ client-ip=209.85.208.177; helo=mail-lj1-f177.google.com; pr=C
+Received: from mail-lj1-f177.google.com (209.85.208.177) by
+ MR2FRA01FT004.mail.protection.outlook.com (10.152.50.111) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7270.14 via Frontend Transport; Sat, 3 Feb 2024 19:34:35 +0000
+Received: by mail-lj1-f177.google.com with SMTP id 38308e7fff4ca-2d073b54359so37743321fa.0
+        for <proyectos@nidc-ukraine.hq.nato.int>; Sat, 03 Feb 2024 11:34:35 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1706988874; x=1707593674; darn=nidc-ukraine.hq.nato.int;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=wdGzNczfscpVc8BIhY7c/lv2Vy/o3lsNBXi/2pfNqG8=;
+        b=a/RLgt01ByCjX6W97kLl8mIA7oXrUqfLor2Dt5O9VqOyrV6KZ3qKRUr1M+e7XrFSqj
+         72UcFY4YqC0Xb/SOLbuwey05fKsKOqWNh8NBIjfqO8ddIGzA0OzNFzU2d9V5WXJpmWEc
+         cWxTQxVJvm6QxnfYp9/e/IvvhIzA8VU9MGyBiZfVE9JryPcxSyHtv+VkXORHZcIVZSsq
+         KJqm47H4iaaBCS/EnmrLq3H+GK51aKn1dVOSlNlszLCfJcgCE++AkE5/PfjFRwUURsnW
+         hJu6pKiC1JdPqQMOtNinBHaUm8FznHn93r3RLKMDHz8PmGnYYNJmQbv3mPAdSABMfFAI
+         72kg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706988874; x=1707593674;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=wdGzNczfscpVc8BIhY7c/lv2Vy/o3lsNBXi/2pfNqG8=;
+        b=WYjDRAKoFilcAYIVenn0xpag1NCQxxuFr4mnMnt6C0sfNItIoBuGdb8ZUN1YSDOm18
+         GzcarOHxo2/nPHkv8Hq2lSl/43eOfLQ8k+OIj3IurVS65bRGOkTNIriesPbVT8xmNR+P
+         b6M6wwuOpKX+ETKCd9Ir6ify0t86H4b3yljEcIjazOGdNIxtsVBgKCtx2CkHwgaQx8SB
+         6T+jtkItBfEgjlGznkHg+O2xHD+IEaQk+C9g8XdZcKtIw3nFU67ETRruBCyvKboQNHGc
+         GpZjl0CiM3znDAw+ZHF2MgFHD/yGh2tbummDwhj2Wl676aT2yY6h5cK1yoE2BgZqUCgj
+         eoXQ==
+X-Gm-Message-State: AOJu0Yy6BPJeGqLWubm0xvcN3WhbJliNolq0yM+fueULxpCl7gVfWCnb
+	QcecsTZ3l8r5ZTb32RodTP7CcS8rwlRYgz4hr2gm48kzdsJ+TQCU75S3RgvEDyiXHYwA808sAfo
+	ekoIJeU3PX5ZFHYtJ7K7ptT5QhXBKMgIK
+X-Google-Smtp-Source: AGHT+IH+ZNupgtcAoDqos6L797DOrquclEc0RmMlbw3fKnfbQK7YUJ9q8udoTzyqb2xWneKX5vWBTn0i+D14JfAlEnI=
+X-Received: by 2002:a2e:7401:0:b0:2cf:2004:3614 with SMTP id
+ p1-20020a2e7401000000b002cf20043614mr6714382ljc.15.1706988874309; Sat, 03 Feb
+ 2024 11:34:34 -0800 (PST)
+MIME-Version: 1.0
+From: Gerardo Jauregui <gerardojpoficial@gmail.com>
+Date: Sat, 3 Feb 2024 13:34:23 -0600
+Message-ID: <CAEMgM+sF8=_QmpVt6CRoob7cx3=wx+2+pQLi5sxEbFHmK0y2Kg@mail.gmail.com>
+Subject: Co Patrocinio
+To: proyectos@nidc-ukraine.hq.nato.int
+Content-Type: multipart/alternative; boundary="0000000000007d236306107f51ee"
+Return-Path: gerardojpoficial@gmail.com
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: ddad982a-39c4-4252-9edc-cd6eea77e504:0
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: MR2FRA01FT004:EE_|PR0P264MB2551:EE_
+X-MS-Office365-Filtering-Correlation-Id: e7d16fe5-50da-4cb0-dfca-08dc24ef276e
